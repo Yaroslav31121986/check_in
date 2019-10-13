@@ -1,9 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    <title>Форма регистрации</title>
+    <title>Форма регистрации и авторизации</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,13 +14,13 @@
 <body>
     <div class="container mt-4">
        <?php
-       session_start();
+       
         // if ($_COOKIE['user'] == ''){
        if ($_SESSION['login'] == ''){
         	echo<<<HERE
         <div class="row">
             <div class="col">
-                <h1>Форма регистрации</h1>
+                <h1>Форма регистрации </h1>
                 <form action="validation_form/check.php" method="post">
                 	<label for="login">Введите логин</label>
                     <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин"><br>
