@@ -2,6 +2,7 @@
 //открываем сессию
 session_start();
 echo "<p>Привет ".$_SESSION['login']." Чтобы выйти нажмите <a href='rex.php'>Выход</a></p>";
+//Уничтожает все данные сессии
 session_destroy();
  //удаляем кукиииии...!!!
 // setcookie( 'user', $user['name'], time() - 60, "/");
